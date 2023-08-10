@@ -17,8 +17,7 @@ tasks:
       sudo apt-get install solc
 
       # Set CERTORAKEY environment variable
-      export CERTORAKEY=ba8bd0cce48640bc45fef955c30ef106de4e4a5d
-      # export CERTORAKEY=ba8bd0cce48640bc45fef955c30ef106de4e4a5d
+      export CERTORAKEY=xxx
 
       # gp init
       # gp validate
