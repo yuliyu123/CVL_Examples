@@ -1,0 +1,33 @@
+# List the start up tasks. Learn more: https://www.gitpod.io/docs/configure/workspaces/tasks
+tasks:
+  - name: Install Certora and solc
+    init: |
+      #!/bin/bash
+
+      # Install certora-cli
+      pip3 install certora-cli
+
+      # Add Ethereum PPA
+      sudo add-apt-repository ppa:ethereum/ethereum
+
+      # Update package lists
+      sudo apt-get update
+
+      # Install solc compiler
+      sudo apt-get install solc
+
+      # Set CERTORAKEY environment variable
+      export CERTORAKEY=ba8bd0cce48640bc45fef955c30ef106de4e4a5d
+      # export CERTORAKEY=ba8bd0cce48640bc45fef955c30ef106de4e4a5d
+
+      # gp init
+      # gp validate
+
+# List the ports to expose. Learn more: https://www.gitpod.io/docs/configure/workspaces/ports
+ports:
+  - name: Frontend
+    description: Port 3000 for the frontend
+    port: 3000
+    onOpen: open-preview
+
+# Learn more from ready-to-use templates: https://www.gitpod.io/docs/introduction/getting-started/quickstart
